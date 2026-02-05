@@ -11,11 +11,12 @@ import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 import uce.edu.web.api.domain.Usuario;
 
-@Path("/auth")
+@Path("/autorizacion")
 @Produces(MediaType.APPLICATION_JSON)
 public class AuthResource {
    @GET
     @Path("/token")
+    @Produces(MediaType.APPLICATION_JSON)
     public TokenResponse token(@QueryParam("user") String user, 
                                @QueryParam("password") String password) {
         
